@@ -1,0 +1,52 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Test SLI Pages",
+        "description": "",
+        "id": "sli-search;test-sli-pages",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2413780100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Open the website URL.",
+            "match": {
+              "location": "sli_search.open_the_website_URL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 118034979300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "enter a keyword to search.",
+            "match": {
+              "location": "sli_search.enter_a_keyword_to_search()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "SLI Search",
+    "description": "",
+    "id": "sli-search",
+    "keyword": "Feature",
+    "uri": "src/test/java/Features/sli.search.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@sli_search"
+      }
+    ]
+  }
+]
