@@ -59,7 +59,7 @@ public class sli_search extends Set{
 		  child1_product.click();
 		  Thread.sleep(4000);
 		  
-		  WebElement download_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='clicking/]"))); 
+		  WebElement download_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Download this presentation')]"))); 
 		  Thread.sleep(8000); 
 		  download_ppt.click(); 
 		   Thread.sleep(5000);
@@ -77,7 +77,7 @@ public class sli_search extends Set{
 		  
 		  
 		  WebElement download_ppt1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Download this presentation')]"))); 
-		  Thread.sleep(1500); 
+		  Thread.sleep(2000); 
 		  download_ppt1.click(); 
 		  Thread.sleep(2000);
 		  
@@ -106,9 +106,9 @@ public class sli_search extends Set{
 		 
 		 
 		 WebElement geek_download_1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
-		 Thread.sleep(2700);
+		 Thread.sleep(500);
 		 geek_download_1.click();
-		 Thread.sleep(2200);
+		 Thread.sleep(5000);
 		 
 		 WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
 		 Thread.sleep(3000);
@@ -127,9 +127,9 @@ public class sli_search extends Set{
 		 
 		 
 		 WebElement geek_download_12 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
-		 Thread.sleep(2700);
+		 Thread.sleep(5000);
 		 geek_download_12.click();
-		 Thread.sleep(2200);
+		 Thread.sleep(5000);
 		
 	}
 	
