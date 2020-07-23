@@ -89,14 +89,14 @@ public class sli_search extends Set{
 		  
 		  driver.navigate().refresh(); Thread.sleep(3800);
 		  
-		  WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.id("email")));
-		  old_paid_email.sendKeys("himanshi.sharma@slidetech.in");
-		  
-		  WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.id("pass")));
-		  old_paid_pass.sendKeys("123456");
-		  
-		  WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
-		  old_paid_login_btn.click();
+		 WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
+    old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
+    
+    WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[3]/div/input")));
+    old_paid_pass.sendKeys("Qwerty@1");
+		
+		 WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
+	    old_paid_login_btn.click();
 		  
 		  
 		  WebElement download_ppt1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Download this presentation')]"))); 
