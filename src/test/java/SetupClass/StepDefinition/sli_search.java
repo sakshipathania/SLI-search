@@ -19,9 +19,22 @@ public class sli_search extends Set{
 	@Given("^Open the website URL\\.$")
 	public void open_the_website_URL() throws Throwable {
 		driver.get(AppURL);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+	log.info("It's opening the website URL");
+	Thread.sleep(1000);
+	driver.get("https://www.slideteam.net");
+	Thread.sleep(2000);
+	driver.get("https://www.slideteam.net");
+	Thread.sleep(2000);
+    driver.manage().deleteAllCookies();
+    Thread.sleep(2000);
+	try {
+		driver.findElement(By.cssSelector(".authorization-link > a:nth-child(1)")).click();
+		Thread.sleep(2000);
 		log.info("It's opening the website URL");
-		Thread.sleep(1200);
+	} 
+	catch (NoSuchElementException popup) {
+	}
 			WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
     old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
     
@@ -36,7 +49,7 @@ public class sli_search extends Set{
 	@Then("^enter a keyword to search\\.$")
 	public void enter_a_keyword_to_search() throws Throwable {
 		
-		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/header/div[1]/div[1]/div[2]/form/div[1]/div/input[1]")));
+		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
 		  search_btn.sendKeys("HR"); 
 		  Thread.sleep(4000);
