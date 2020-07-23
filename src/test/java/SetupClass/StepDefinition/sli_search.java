@@ -89,7 +89,7 @@ public class sli_search extends Set{
 		  
 		  driver.navigate().refresh(); Thread.sleep(3800);
 		  
-		 WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
+		/* WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
     old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
     
     WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[3]/div/input")));
@@ -105,7 +105,7 @@ public class sli_search extends Set{
 		  Thread.sleep(2000);
 		  
 		  driver.navigate().refresh(); 
-		  Thread.sleep(3800);
+		  Thread.sleep(3800); */
 		 
 		driver.get("https://www.slidegeeks.com");
 		
