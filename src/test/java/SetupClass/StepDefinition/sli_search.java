@@ -27,7 +27,7 @@ public class sli_search extends Set{
 	@Then("^enter a keyword to search\\.$")
 	public void enter_a_keyword_to_search() throws Throwable {
 		
-		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.id("search")));
+		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/header/div[1]/div[1]/div[2]/form/div[1]/div/input[1]")));
 		  Thread.sleep(2000);
 		  search_btn.sendKeys("HR"); 
 		  Thread.sleep(4000);
