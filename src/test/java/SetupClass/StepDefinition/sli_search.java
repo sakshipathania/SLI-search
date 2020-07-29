@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -15,6 +16,7 @@ import cucumber.api.java.en.Then;
 public class sli_search extends Set{
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
+	  JavascriptExecutor js = (JavascriptExecutor) driver;
 
 
 	@Given("^Open the website URL\\.$")
@@ -130,6 +132,7 @@ public class sli_search extends Set{
 		 
 		 WebElement geek_download_1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
 		 Thread.sleep(500);
+		js.executeScript("arguments[0].scrollIntoView();",geek_download_1);
 		 geek_download_1.click();
 		 Thread.sleep(5000);
 		 
@@ -151,6 +154,7 @@ public class sli_search extends Set{
 		 
 		 WebElement geek_download_12 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Download this presentation')]"))); 
 		 Thread.sleep(5000);
+		js.executeScript("arguments[0].scrollIntoView();",geek_download_12);
 		 geek_download_12.click();
 		 Thread.sleep(5000);
 		
