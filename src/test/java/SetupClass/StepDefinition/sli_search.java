@@ -149,7 +149,7 @@ public class sli_search extends Set{
 		 Thread.sleep(3000);
 		 
 		 
-		 WebElement geek_download_12 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
+		 WebElement geek_download_12 =wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-addtocart > div > div.pg-product-addtocart.clearfix > a > span"))); 
 		 Thread.sleep(5000);
 		 geek_download_12.click();
 		 Thread.sleep(5000);
