@@ -130,29 +130,29 @@ public class sli_search extends Set{
 		 Thread.sleep(6300);
 		 
 		 
-		 WebElement geek_download_1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
+		 WebElement geek_download_1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(/html/body/div[1]/div[5]/div[1]/section[2]/div/div/div[2]/div/div[1]/div/div[1]/div/a"))); 
 		 Thread.sleep(500);
 		js.executeScript("arguments[0].scrollIntoView();",geek_download_1);
 		 geek_download_1.click();
 		 Thread.sleep(5000);
 		 
-		 WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
+		 WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(1) > input")));
 		 Thread.sleep(3000);
 		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
 		 Thread.sleep(3000);
 		 
-		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span.pg-login-form-password > input:nth-child(1)")));
+		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div:nth-child(2) > input")));
 		 Thread.sleep(3000);
 		login_password.sendKeys("123456");
 		 Thread.sleep(3000);
 		 
-		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-button-login")));
+		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div.btn-wrapper.login_btn > input")));
 		 Thread.sleep(3000);
 		 login_btn.click();
 		 Thread.sleep(3000);
 		 
 		 
-		 WebElement geek_download_12 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
+		 WebElement geek_download_12 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[5]/div[1]/section[2]/div/div/div[2]/div/div[1]/div/div[1]/div/a"))); 
 		 Thread.sleep(5000);
 		js.executeScript("arguments[0].scrollIntoView();",geek_download_12);
 		 geek_download_12.click();
