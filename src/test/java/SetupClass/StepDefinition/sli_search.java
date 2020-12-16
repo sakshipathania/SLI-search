@@ -130,7 +130,7 @@ public class sli_search extends Set{
 		 Thread.sleep(6300);
 		 
 		 
-		 WebElement geek_download_1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(/html/body/div[1]/div[5]/div[1]/section[2]/div/div/div[2]/div/div[1]/div/div[1]/div/a"))); 
+		 /*WebElement geek_download_1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(/html/body/div[1]/div[5]/div[1]/section[2]/div/div/div[2]/div/div[1]/div/div[1]/div/a"))); 
 		 Thread.sleep(500);
 		js.executeScript("arguments[0].scrollIntoView();",geek_download_1);
 		 geek_download_1.click();
