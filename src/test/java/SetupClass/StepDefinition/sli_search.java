@@ -22,15 +22,8 @@ public class sli_search extends Set {
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
 
 
-	@Given("^Open the website URL\\.$")
-public class sli_search extends Set {
-	
-	WebDriverWait wait = new WebDriverWait(driver,50);
-	  JavascriptExecutor js = (JavascriptExecutor) driver;
-
-
 	@Given("^Open the website URL//.$")
-	public void open_the_website_URL() throws Throwable {
+	public void Open_the_website_URL() throws Throwable {
 		driver.get(AppURL);
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	log.info("It's opening the website URL");
