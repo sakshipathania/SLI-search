@@ -54,6 +54,8 @@ public class sli_search extends Set{
 	@Then("^enter a keyword to search\\.$")
 	public void enter_a_keyword_to_search() throws Throwable {
 		
+		
+		 for(int i=0; i<=4; i++) {
 		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
 		  search_btn.sendKeys("Org Chart"); 
@@ -82,18 +84,8 @@ public class sli_search extends Set{
 		  System.out.println("classname  of parent is ----------------------->"+parent_product);
 		
 		  Thread.sleep(4000);
-	}
-		/*  WebElement search_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
-		  Thread.sleep(2000);
-		//search_btn1.sendKeys("HR"); 
-		//Thread.sleep(4000);
-		  search_btn1.clear(); 
-		Thread.sleep(1000);
-		search_btn1.clear(); 
-		  Thread.sleep(4000);*/
-		   //search_btn.sendKeys("HR"); 
-		@Then("^remove a keyword to search\\.$")
-	public void remove_a_keyword_to_search() throws Throwable {
+	
+		
 		  WebElement search_btn = driver.findElement(By.cssSelector("#search"));
 		  Thread.sleep(2000);
 		  search_btn.sendKeys(Keys.CONTROL + "a");
@@ -105,6 +97,9 @@ public class sli_search extends Set{
 		  Thread.sleep(2000); 
 		Assert.assertNull(prod_sugg) ;
 		js.executeScript("alert('Product Suggestions are not displaying');");
+		 }
+		
+	}
 		
 		 /* String pro_sugg_loc=prod_sugg.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
@@ -125,7 +120,7 @@ public class sli_search extends Set{
 		  
 		//  driver.navigate().refresh(); Thread.sleep(3800);
 		
-	}
+	
 		  
 		/* WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
     old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
