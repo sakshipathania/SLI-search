@@ -33,13 +33,13 @@ public class sli_search extends Set{
 	//Thread.sleep(2000);
     driver.manage().deleteAllCookies();
     Thread.sleep(2000);
-	try {
+	/*try {
 		driver.findElement(By.cssSelector(".authorization-link > a:nth-child(1)")).click();
 		Thread.sleep(2000);
 		log.info("It's opening the website URL");
 	} 
 	catch (NoSuchElementException popup) {
-	}
+	}*/
 			//WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
    // old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
     
@@ -91,8 +91,11 @@ public class sli_search extends Set{
 		search_btn1.clear(); 
 		  Thread.sleep(4000);*/
 		   //search_btn.sendKeys("HR"); 
+		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
+		  Thread.sleep(2000);
 		  search_btn.clear();
-		  Thread.sleep(3000);
+		  Thread.sleep(8000);
+		
 		  Boolean search_d =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))).isDisplayed(); 
 		  Thread.sleep(2000); 
 		  System.out.println("Suggestion Box is :"+search_d);
