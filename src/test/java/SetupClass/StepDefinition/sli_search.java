@@ -103,9 +103,9 @@ public class sli_search extends Set{
 		
 		 WebElement prod_suggestion =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))); 
 		  Thread.sleep(2000); 
-		if(Assert. assertNull(prod_suggestion)) {
+		Assert.assertNull(prod_suggestion) ;
 		js.executeScript("alert('Product Suggestions are not displaying');");
-		}
+		
 		 /* String pro_sugg_loc=prod_sugg.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
 		  
