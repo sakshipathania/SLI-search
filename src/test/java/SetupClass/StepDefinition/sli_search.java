@@ -93,11 +93,17 @@ public class sli_search extends Set{
 		  Thread.sleep(8000);
 		
 		
-		 WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
+		if(driver.findElement(By.id("sli_raclist_products")).isDisplayed()){
+                    System.out.println("Element is Visible");
+                        }  else {
+                            System.out.println("Element is Not Visible");
+                             }
+			 
+			/* WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
 		  Thread.sleep(2000); 
 		  Assert.assertFalse(element.isDisplayed());
 		js.executeScript("alert('Product Suggestions are not displaying');");
-		 }
+		 }*/
 		
 	}
 		
