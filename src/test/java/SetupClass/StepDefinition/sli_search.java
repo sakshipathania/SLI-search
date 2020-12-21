@@ -107,7 +107,7 @@ public class sli_search extends Set{
 		  download_ppt.click(); 
 		   Thread.sleep(5000);*/
 		  
-		  driver.navigate().refresh(); Thread.sleep(3800);
+		//  driver.navigate().refresh(); Thread.sleep(3800);
 		
 	}
 		  
