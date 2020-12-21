@@ -97,12 +97,12 @@ public class sli_search extends Set{
 		if(driver.findElement(By.id("sli_raclist_products")).isDisplayed()){
 			
                     System.out.println("Element is Visible");
-			throw InterruptedException ("Element Should not be visible");
+			throw Throwable ("Element Should not be visible");
 			
                         }  else {
                             System.out.println("Element is Not Visible");
                              }
-			 Assert.assertFalse(element.isDisplayed());
+			 //Assert.assertFalse(element.isDisplayed());
 			 
 			/* WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
 		  Thread.sleep(2000); 
