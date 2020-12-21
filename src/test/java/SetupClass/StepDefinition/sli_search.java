@@ -100,7 +100,7 @@ public class sli_search extends Set {
 		  
 		  WebElement search_1n =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_section"))); 
 		  Thread.sleep(2000); 
-		  String text1=search_1n.getText(); 
+		  String text00=search_1n.getText(); 
 		  System.out.println(text00); 
 		  Thread.sleep(3000);
 		  
@@ -112,7 +112,7 @@ public class sli_search extends Set {
 		  
 		  WebElement prod_suggn =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
 		  Thread.sleep(2000); 
-		  String pro_sugg_locn=prod_sugg.getText();
+		  String pro_sugg_locn=prod_suggn.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_locn);
 		  
 		  WebElement parent_productn =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
