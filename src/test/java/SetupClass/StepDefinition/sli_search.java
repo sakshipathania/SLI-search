@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.interactions.Actions;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -78,16 +80,27 @@ public class sli_search extends Set{
 		  WebElement parent_product =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
 		  Thread.sleep(2000);
 		  System.out.println("classname  of parent is ----------------------->"+parent_product);
+		
+		  Thread.sleep(4000);
+		  WebElement search_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
+		  Thread.sleep(2000);
+		  search_btn1.clear(); 
+		  Thread.sleep(4000);
+		   //search_btn.sendKeys("HR"); 
 		  
-		  WebElement child1_product = wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_product"))); 
+		  Boolean search_1 =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_ac_section_products"))).isDisplayed(); 
+		  Thread.sleep(2000); 
+		  System.out.println("Search Box is :"+search_1);
+		
+		  /*WebElement child1_product = wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_product"))); 
 		  Thread.sleep(1000); 
 		  child1_product.click();
-		  Thread.sleep(4000);
+		  Thread.sleep(4000);*/
 		  
-		  WebElement download_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Download this presentation')]"))); 
+		/*  WebElement download_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit'][contains(.,'Download this presentation')]"))); 
 		  Thread.sleep(8000); 
 		  download_ppt.click(); 
-		   Thread.sleep(5000);
+		   Thread.sleep(5000);*/
 		  
 		  driver.navigate().refresh(); Thread.sleep(3800);
 		  
@@ -109,7 +122,7 @@ public class sli_search extends Set{
 		  driver.navigate().refresh(); 
 		  Thread.sleep(3800); */
 		 
-		driver.get("https://www.slidegeeks.com");
+		/*driver.get("https://www.slidegeeks.com");
 		
 		Thread.sleep(5400);
 		
@@ -158,9 +171,9 @@ public class sli_search extends Set{
 		 geek_download_12.click();
 		 Thread.sleep(5000);*/
 		
-	}
+	}*/
 	
 
-
+}
 	
 }
