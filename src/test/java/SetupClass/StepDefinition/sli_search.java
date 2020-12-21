@@ -55,7 +55,7 @@ public class sli_search extends Set{
 	public void enter_a_keyword_to_search() throws Throwable {
 		
 		
-		 for(int i=0; i<=4; i++) {
+	
 		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
 		  search_btn.sendKeys("Org Chart"); 
@@ -94,10 +94,14 @@ public class sli_search extends Set{
 		
 		
 		if(driver.findElement(By.id("sli_raclist_products")).isDisplayed()){
+			
                     System.out.println("Element is Visible");
+			throw InterruptedException ("Element Should not be visible")
+			
                         }  else {
                             System.out.println("Element is Not Visible");
                              }
+			 Assert.assertFalse(element.isDisplayed());
 			 
 			/* WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
 		  Thread.sleep(2000); 
@@ -105,7 +109,7 @@ public class sli_search extends Set{
 		js.executeScript("alert('Product Suggestions are not displaying');");
 		 }*/
 		
-	}
+	
 	}
 		
 		 /* String pro_sugg_loc=prod_sugg.getText();
