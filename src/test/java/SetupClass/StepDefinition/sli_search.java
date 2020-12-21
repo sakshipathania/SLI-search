@@ -93,9 +93,9 @@ public class sli_search extends Set{
 		  Thread.sleep(8000);
 		
 		
-		// WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
+		 WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
 		  Thread.sleep(2000); 
-		Assert.assertFalse(prod_sugg) ;
+		  Assert.assertFalse(element.isDisplayed());
 		js.executeScript("alert('Product Suggestions are not displaying');");
 		 }
 		
