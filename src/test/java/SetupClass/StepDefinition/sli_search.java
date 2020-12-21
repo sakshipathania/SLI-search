@@ -96,7 +96,7 @@ public class sli_search extends Set{
 	public void remove_a_keyword_to_search() throws Throwable {
 		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
-		 search_btn.sendKeys(Keys.SPACE, Keys.BACK_SPACE)
+		 search_btn.sendKeys(Keys.SPACE, Keys.BACK_SPACE);
 		  Thread.sleep(8000);
 		
 		  Boolean search_d =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))).isDisplayed(); 
