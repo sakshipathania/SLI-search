@@ -11,7 +11,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.interactions.Actions;
-
+import java.io.ioexception
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -97,7 +97,7 @@ public class sli_search extends Set{
 		if(driver.findElement(By.id("sli_raclist_products")).isDisplayed()){
 			
                     System.out.println("Element is Visible");
-			throw new exception_class ("Element Should not be visible");
+			throw new IOException ("Element Should not be visible");
 			
                         }  else {
                             System.out.println("Element is Not Visible");
