@@ -105,7 +105,67 @@ public class sli_search extends Set{
 		driver.navigate().refresh(); Thread.sleep(3800);
 	
 	}
-	
+		
+		@Then("^Click on Sort\\.$")
+	        public void Cllick_on_Sort() throws Throwable {
+			Thread.sleep(4000);
+		 WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
+		  Thread.sleep(2000);
+		  search_btn.sendKeys("HR"); 
+		  Thread.sleep(4000);
+		  
+		  
+		  
+		  WebElement search_1 =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_section"))); 
+		  Thread.sleep(2000); 
+		  String text1=search_1.getText(); 
+		  System.out.println(text1); 
+		  Thread.sleep(3000);
+		  
+		  String actual_text1="Product Suggestions for Hr Interview ";
+		  
+		  if(text1.equalsIgnoreCase(actual_text1)) {
+		  log.info("product suggestion tab header is displayed correctly "); 
+		  }
+		  
+		  WebElement prod_sugg =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
+		  Thread.sleep(2000); 
+		  String pro_sugg_loc=prod_sugg.getText();
+		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
+		  
+		  WebElement parent_product =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
+		  Thread.sleep(2000);
+		  System.out.println("classname  of parent is ----------------------->"+parent_product);
+		   
+		Thread.sleep(4000);
+		  WebElement View_More = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sli_autocomplete > div > div.sli_ac_products > div > div.sli_view_more_link_wrapper > a"))); 
+			Thread.sleep(3000);
+			View_More.Click();
+			Thread.sleep(5000);
+			
+			Thread.sleep(3000);
+		WebElement Sort= driver.findElement(By.cssSelector("#dk0-combobox"));
+		Thread.sleep(3000);
+		Sort.click();
+			
+		WebElement Newest = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https\:\/\/www\.slideteam\.net\/search\/go\?lbc\=slideteam\&method\=and\&p\=Q\&ts\=custom\&uid\=516718103\&w\=hr\%20annual\%20report\&isort\=newest"))); 
+			Thread.sleep(3000);
+	         Newest.click();
+			
+		Thread.sleep(3000);
+			
+			WebElement Sort1 = driver.findElement(By.cssSelector("#dk0-combobox"));
+		Thread.sleep(3000);
+		Sort1.click();
+		Thread.sleep(3000);
+			
+		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https\:\/\/www\.slideteam\.net\/search\/go\?lbc\=slideteam\&method\=and\&p\=Q\&ts\=custom\&uid\=516718103\&w\=hr\%20annual\%20report"))); 
+			Thread.sleep(3000);
+	         Popularity.click();
+			
+		Thread.sleep(3000);	
+			
+		}
 		//driver.navigate().refresh(); Thread.sleep(3800);
 		 /* String pro_sugg_loc=prod_sugg.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
