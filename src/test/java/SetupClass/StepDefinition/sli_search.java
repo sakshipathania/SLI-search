@@ -91,33 +91,33 @@ public class sli_search extends Set {
 		@Then("^Click on Sort//.$")
 	        public void Click_on_Sort() throws Throwable {
 			Thread.sleep(4000);
-		 WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
+		 WebElement search_btnn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
-		  search_btn.sendKeys("HR"); 
+		  search_btnn.sendKeys("HR"); 
 		  Thread.sleep(4000);
 		  
 		  
 		  
-		  WebElement search_1 =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_section"))); 
+		  WebElement search_1n =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_section"))); 
 		  Thread.sleep(2000); 
-		  String text1=search_1.getText(); 
-		  System.out.println(text1); 
+		  String text1=search_1n.getText(); 
+		  System.out.println(text00); 
 		  Thread.sleep(3000);
 		  
-		  String actual_text1="Product Suggestions for Hr Interview ";
+		  String actual_text00="Product Suggestions for Hr Interview ";
 		  
-		  if(text1.equalsIgnoreCase(actual_text1)) {
+		  if(text1.equalsIgnoreCase(actual_text00)) {
 		  log.info("product suggestion tab header is displayed correctly "); 
 		  }
 		  
-		  WebElement prod_sugg =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
+		  WebElement prod_suggn =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
 		  Thread.sleep(2000); 
-		  String pro_sugg_loc=prod_sugg.getText();
-		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
+		  String pro_sugg_locn=prod_sugg.getText();
+		  System.out.println("product suggestion list name is ----"+pro_sugg_locn);
 		  
-		  WebElement parent_product =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
+		  WebElement parent_productn =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
 		  Thread.sleep(2000);
-		  System.out.println("classname  of parent is ----------------------->"+parent_product);
+		  System.out.println("classname  of parent is ----------------------->"+parent_productn);
 		   
 		Thread.sleep(4000);
 		  WebElement View_More = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sli_autocomplete > div > div.sli_ac_products > div > div.sli_view_more_link_wrapper > a"))); 
