@@ -16,7 +16,7 @@ import SetupClass.Set;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class sli_search extends Set{
+public class sli_search extends Set {
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -104,6 +104,7 @@ public class sli_search extends Set{
                              }
 		driver.navigate().refresh(); Thread.sleep(3800);
 	
+	}
 	}
 		
 		@Then("^Click on Sort\\.$")
