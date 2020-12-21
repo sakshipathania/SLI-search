@@ -106,9 +106,9 @@ public class sli_search extends Set{
 		  String pro_sugg_loc=prod_sugg.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
 		  
-		  Boolean prod_sugg =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))).isDisplayed(); 
+		  Boolean prod_suggestion =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))).isDisplayed(); 
 		  Thread.sleep(2000); 
-		  System.out.println("Suggestion Box is :"+prod_sugg);
+		  System.out.println("Suggestion Box is :"+prod_suggestion);
 		
 		  /*WebElement child1_product = wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_product"))); 
 		  Thread.sleep(1000); 
