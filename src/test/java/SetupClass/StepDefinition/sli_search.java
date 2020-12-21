@@ -82,19 +82,20 @@ public class sli_search extends Set{
 		  System.out.println("classname  of parent is ----------------------->"+parent_product);
 		
 		  Thread.sleep(4000);
-		  WebElement search_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
+		/*  WebElement search_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
 		//search_btn1.sendKeys("HR"); 
 		//Thread.sleep(4000);
 		  search_btn1.clear(); 
 		Thread.sleep(1000);
 		search_btn1.clear(); 
-		  Thread.sleep(4000);
+		  Thread.sleep(4000);*/
 		   //search_btn.sendKeys("HR"); 
-		  
-		  Boolean search_d =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_ac_section_products"))).isDisplayed(); 
+		  search_btn.Clear();
+		  Thread.sleep(3000);
+		  Boolean search_d =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))).isDisplayed(); 
 		  Thread.sleep(2000); 
-		  System.out.println("Search Box is :"+search_d);
+		  System.out.println("Suggestion Box is :"+search_d);
 		
 		  /*WebElement child1_product = wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_product"))); 
 		  Thread.sleep(1000); 
