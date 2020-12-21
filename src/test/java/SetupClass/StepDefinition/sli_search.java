@@ -102,17 +102,10 @@ public class sli_search extends Set{
                         }  else {
                             System.out.println("Element is Not Visible");
                              }
-			 //Assert.assertFalse(element.isDisplayed());
-			 
-			/* WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
-		  Thread.sleep(2000); 
-		  Assert.assertFalse(element.isDisplayed());
-		js.executeScript("alert('Product Suggestions are not displaying');");
-		 }*/
 		
 	
 	}
-		
+		driver.navigate().refresh(); Thread.sleep(3800);
 		 /* String pro_sugg_loc=prod_sugg.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
 		  
@@ -130,7 +123,7 @@ public class sli_search extends Set{
 		  download_ppt.click(); 
 		   Thread.sleep(5000);*/
 		  
-		//  driver.navigate().refresh(); Thread.sleep(3800);
+		driver.navigate().refresh(); Thread.sleep(3800);
 		
 	
 		  
