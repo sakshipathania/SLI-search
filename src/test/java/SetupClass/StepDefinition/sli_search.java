@@ -106,7 +106,7 @@ public class sli_search extends Set {
 		  
 		  String actual_text00="Product Suggestions for Hr Interview ";
 		  
-		  if(text1.equalsIgnoreCase(actual_text00)) {
+		  if(text00.equalsIgnoreCase(actual_text00)) {
 		  log.info("product suggestion tab header is displayed correctly "); 
 		  }
 		  
