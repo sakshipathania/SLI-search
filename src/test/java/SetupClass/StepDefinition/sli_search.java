@@ -29,7 +29,7 @@ public class sli_search extends Set {
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
 
 
-	@Given("^Open the website URL\\.$")
+	@Given("^Open the website URL//.$")
 	public void open_the_website_URL() throws Throwable {
 		driver.get(AppURL);
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -43,7 +43,7 @@ public class sli_search extends Set {
     Thread.sleep(2000);
 	}
 
-	@Then("^enter a keyword to search\\.$")
+	@Then("^enter a keyword to search//.$")
 	public void enter_a_keyword_to_search() throws Throwable {
 		
 		 for(int i=0; i<=4; i++) {
@@ -95,7 +95,7 @@ public class sli_search extends Set {
 	}
 	}
 		
-		@Then("^Click on Sort\\.$")
+		@Then("^Click on Sort//.$")
 	        public void Click_on_Sort() throws Throwable {
 			Thread.sleep(4000);
 		 WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
@@ -137,7 +137,7 @@ public class sli_search extends Set {
 		Thread.sleep(3000);
 		Sort.click();
 			
-		WebElement Newest = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https\:\/\/www\.slideteam\.net\/search\/go\?lbc\=slideteam\&method\=and\&p\=Q\&ts\=custom\&uid\=516718103\&w\=hr\%20annual\%20report\&isort\=newest"))); 
+		WebElement Newest = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https/:////www/.slideteam/.net//search//go/?lbc/=slideteam/&method/=and/&p/=Q/&ts/=custom/&uid/=516718103/&w/=hr/%20annual/%20report/&isort/=newest"))); 
 			Thread.sleep(3000);
 	         Newest.click();
 			
@@ -148,7 +148,7 @@ public class sli_search extends Set {
 		Sort1.click();
 		Thread.sleep(3000);
 			
-		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https\:\/\/www\.slideteam\.net\/search\/go\?lbc\=slideteam\&method\=and\&p\=Q\&ts\=custom\&uid\=516718103\&w\=hr\%20annual\%20report"))); 
+		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https/:////www/.slideteam/.net//search//go/?lbc/=slideteam/&method/=and/&p/=Q/&ts/=custom/&uid/=516718103/&w/=hr/%20annual/%20report"))); 
 			Thread.sleep(3000);
 	         Popularity.click();
 			
