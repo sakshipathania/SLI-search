@@ -82,6 +82,7 @@ public class sli_search extends Set{
 		  System.out.println("classname  of parent is ----------------------->"+parent_product);
 		
 		  Thread.sleep(4000);
+	}
 		/*  WebElement search_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
 		//search_btn1.sendKeys("HR"); 
@@ -91,6 +92,8 @@ public class sli_search extends Set{
 		search_btn1.clear(); 
 		  Thread.sleep(4000);*/
 		   //search_btn.sendKeys("HR"); 
+		@Then("^remove a keyword to search\\.$")
+	public void remove_a_keyword_to_search() throws Throwable {
 		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
 		  search_btn.clear();
