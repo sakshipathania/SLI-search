@@ -27,10 +27,10 @@ public class sli_search extends Set{
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	log.info("It's opening the website URL");
 	Thread.sleep(1000);
-	driver.get("https://www.slideteam.net");
-	Thread.sleep(2000);
-	driver.get("https://www.slideteam.net");
-	Thread.sleep(2000);
+	//driver.get("https://www.slideteam.net");
+	//Thread.sleep(2000);
+	//driver.get("https://www.slideteam.net");
+	//Thread.sleep(2000);
     driver.manage().deleteAllCookies();
     Thread.sleep(2000);
 	try {
@@ -40,14 +40,14 @@ public class sli_search extends Set{
 	} 
 	catch (NoSuchElementException popup) {
 	}
-			WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
-    old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
+			//WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
+   // old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
     
-    WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[3]/div/input")));
-    old_paid_pass.sendKeys("Qwerty@1");
+   // WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[3]/div/input")));
+   // old_paid_pass.sendKeys("Qwerty@1");
 		
-		 WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
-	    old_paid_login_btn.click();
+		 //WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
+	  //  old_paid_login_btn.click();
 
 	}
 
