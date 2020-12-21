@@ -23,6 +23,13 @@ public class sli_search extends Set {
 
 
 	@Given("^Open the website URL\\.$")
+public class sli_search extends Set {
+	
+	WebDriverWait wait = new WebDriverWait(driver,50);
+	  JavascriptExecutor js = (JavascriptExecutor) driver;
+
+
+	@Given("^Open the website URL\\.$")
 	public void open_the_website_URL() throws Throwable {
 		driver.get(AppURL);
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -34,22 +41,6 @@ public class sli_search extends Set {
 	//Thread.sleep(2000);
     driver.manage().deleteAllCookies();
     Thread.sleep(2000);
-	/*try {
-		driver.findElement(By.cssSelector(".authorization-link > a:nth-child(1)")).click();
-		Thread.sleep(2000);
-		log.info("It's opening the website URL");
-	} 
-	catch (NoSuchElementException popup) {
-	}*/
-			//WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
-   // old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
-    
-   // WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[3]/div/input")));
-   // old_paid_pass.sendKeys("Qwerty@1");
-		
-		 //WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
-	  //  old_paid_login_btn.click();
-
 	}
 
 	@Then("^enter a keyword to search\\.$")
@@ -61,8 +52,6 @@ public class sli_search extends Set {
 		  Thread.sleep(2000);
 		  search_btn.sendKeys("Org Chart"); 
 		  Thread.sleep(4000);
-		  
-		  
 		  
 		  WebElement search_1 =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_ac_section_products"))); 
 		  Thread.sleep(2000); 
@@ -86,7 +75,6 @@ public class sli_search extends Set {
 		
 		  Thread.sleep(4000);
 	
-		
 		  WebElement search_btn1 = driver.findElement(By.cssSelector("#search"));
 		  Thread.sleep(2000);
 		  search_btn1.sendKeys(Keys.CONTROL + "a");
@@ -103,7 +91,7 @@ public class sli_search extends Set {
                             System.out.println("Element is Not Visible");
                              }
 		driver.navigate().refresh(); Thread.sleep(3800);
-	
+
 	}
 	}
 		
@@ -166,6 +154,7 @@ public class sli_search extends Set {
 			
 		Thread.sleep(3000);	
 			
+		}
 		}
 		//driver.navigate().refresh(); Thread.sleep(3800);
 		 /* String pro_sugg_loc=prod_sugg.getText();
@@ -255,8 +244,4 @@ public class sli_search extends Set {
 		js.executeScript("arguments[0].scrollIntoView();",geek_download_12);
 		 geek_download_12.click();
 		 Thread.sleep(5000);*/
-}
-	
 
-	
-}
