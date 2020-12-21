@@ -84,6 +84,8 @@ public class sli_search extends Set{
 		  Thread.sleep(4000);
 		  WebElement search_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
+		search_btn1.sendKeys("HR"); 
+		Thread.sleep(4000);
 		  search_btn1.clear(); 
 		  Thread.sleep(4000);
 		   //search_btn.sendKeys("HR"); 
