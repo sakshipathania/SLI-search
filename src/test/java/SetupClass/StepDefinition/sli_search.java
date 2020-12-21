@@ -91,7 +91,7 @@ public class sli_search extends Set{
 		search_btn1.clear(); 
 		  Thread.sleep(4000);*/
 		   //search_btn.sendKeys("HR"); 
-		  search_btn.Clear();
+		  search_btn.clear();
 		  Thread.sleep(3000);
 		  Boolean search_d =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))).isDisplayed(); 
 		  Thread.sleep(2000); 
