@@ -86,10 +86,10 @@ public class sli_search extends Set{
 		  Thread.sleep(4000);
 	
 		
-		  WebElement search_btn = driver.findElement(By.cssSelector("#search"));
+		  WebElement search_btn1 = driver.findElement(By.cssSelector("#search"));
 		  Thread.sleep(2000);
-		  search_btn.sendKeys(Keys.CONTROL + "a");
-                  search_btn.sendKeys(Keys.DELETE);
+		  search_btn1.sendKeys(Keys.CONTROL + "a");
+                  search_btn1.sendKeys(Keys.DELETE);
 		  Thread.sleep(8000);
 		
 		
