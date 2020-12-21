@@ -88,9 +88,9 @@ public class sli_search extends Set{
 		  Thread.sleep(4000);
 		   //search_btn.sendKeys("HR"); 
 		  
-		  Boolean search_1 =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_ac_section_products"))).isDisplayed(); 
+		  Boolean search_d =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_ac_section_products"))).isDisplayed(); 
 		  Thread.sleep(2000); 
-		  System.out.println("Search Box is :"+search_1);
+		  System.out.println("Search Box is :"+search_d);
 		
 		  /*WebElement child1_product = wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_product"))); 
 		  Thread.sleep(1000); 
