@@ -55,7 +55,7 @@ public class sli_search extends Set{
 	@Then("^enter a keyword to search\\.$")
 	public void enter_a_keyword_to_search() throws Throwable {
 		
-		
+		 for(int i=0; i<=4; i++) {
 	
 		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
@@ -102,10 +102,11 @@ public class sli_search extends Set{
                         }  else {
                             System.out.println("Element is Not Visible");
                              }
-		
+		driver.navigate().refresh(); Thread.sleep(3800);
 	
 	}
-		driver.navigate().refresh(); Thread.sleep(3800);
+	
+		//driver.navigate().refresh(); Thread.sleep(3800);
 		 /* String pro_sugg_loc=prod_sugg.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
 		  
@@ -123,7 +124,7 @@ public class sli_search extends Set{
 		  download_ppt.click(); 
 		   Thread.sleep(5000);*/
 		  
-		driver.navigate().refresh(); Thread.sleep(3800);
+		//driver.navigate().refresh(); Thread.sleep(3800);
 		
 	
 		  
