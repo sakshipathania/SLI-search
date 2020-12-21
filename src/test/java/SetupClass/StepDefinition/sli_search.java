@@ -108,7 +108,7 @@ public class sli_search extends Set{
 		  
 		  Boolean prod_sugg =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))).isDisplayed(); 
 		  Thread.sleep(2000); 
-		  System.out.println("Suggestion Box is :"+search_d);
+		  System.out.println("Suggestion Box is :"+prod_sugg);
 		
 		  /*WebElement child1_product = wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_product"))); 
 		  Thread.sleep(1000); 
