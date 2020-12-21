@@ -107,7 +107,7 @@ public class sli_search extends Set{
 	}
 		
 		@Then("^Click on Sort\\.$")
-	        public void Cllick_on_Sort() throws Throwable {
+	        public void Click_on_Sort() throws Throwable {
 			Thread.sleep(4000);
 		 WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
