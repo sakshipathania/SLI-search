@@ -103,7 +103,7 @@ public class sli_search extends Set{
 		
 		// WebElement prod_suggestion =driver.findElement(By.id("sli_raclist_products"))); 
 		  Thread.sleep(2000); 
-		Assert.assertNull(prod_suggestion) ;
+		Assert.assertNull(prod_sugg) ;
 		js.executeScript("alert('Product Suggestions are not displaying');");
 		
 		 /* String pro_sugg_loc=prod_sugg.getText();
