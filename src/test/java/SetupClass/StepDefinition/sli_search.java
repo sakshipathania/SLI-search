@@ -106,6 +106,7 @@ public class sli_search extends Set{
 		 }*/
 		
 	}
+	}
 		
 		 /* String pro_sugg_loc=prod_sugg.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
