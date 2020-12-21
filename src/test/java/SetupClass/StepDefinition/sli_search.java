@@ -97,7 +97,7 @@ public class sli_search extends Set{
 		if(driver.findElement(By.id("sli_raclist_products")).isDisplayed()){
 			
                     System.out.println("Element is Visible");
-			throw Throwable ("Element Should not be visible");
+			throw new exception_class ("Element Should not be visible");
 			
                         }  else {
                             System.out.println("Element is Not Visible");
