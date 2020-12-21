@@ -1,6 +1,10 @@
 package SetupClass.StepDefinition;
-import org.junit.Assert;
+
+
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,7 +14,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.interactions.Actions;
-import java.io.IOException;
+
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -21,16 +25,26 @@ public class sli_search extends Set {
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
 
 
-	@Given("^Open the website URL//.$")
+	@Given("^Open the website URL\\.$")
 	public void open_the_website_URL() throws Throwable {
 		driver.get(AppURL);
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	log.info("It's opening the website URL");
 	Thread.sleep(1000);
-	
-          driver.manage().deleteAllCookies();
-          Thread.sleep(2000);
-	 }
+	driver.get("https://www.slideteam.net");
+	Thread.sleep(2000);
+	driver.get("https://www.slideteam.net");
+	Thread.sleep(2000);
+    driver.manage().deleteAllCookies();
+    Thread.sleep(2000);
+	try {
+		driver.findElement(By.cssSelector(".authorization-link > a:nth-child(1)")).click();
+		Thread.sleep(2000);
+		log.info("It's opening the website URL");
+	} 
+	catch (NoSuchElementException popup) {
+	}
+	}
 
 	@Then("^enter a keyword to search//.$")
 	public void enter_a_keyword_to_search() throws Throwable {
