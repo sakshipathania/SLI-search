@@ -151,19 +151,23 @@ public class sli_search extends Set{
 		WebElement Newest =  driver.findElement(By.xpath("//*[text()='Newest']"));
 			Thread.sleep(3000);
 	         Newest.click();
-			Thread.sleep(3000);	
+			Thread.sleep(8000);	
 					
 					  
 	
 	      WebElement Sort1 = driver.findElement(By.cssSelector("#dk0-combobox"));
 		Thread.sleep(3000);
 		Sort1.click();
-		Thread.sleep(3000);
+		
 			
 		WebElement Popularity = driver.findElement(By.xpath("//*[text()='Popularity']")); 
 			Thread.sleep(3000);
 	         Popularity.click();
 			Thread.sleep(3000);	
+		
+		 WebElement Sort2 = driver.findElement(By.cssSelector("#dk0-combobox"));
+		Thread.sleep(3000);
+		Sort2.click();
 		
 		WebElement Most_downloaded = driver.findElement(By.xpath("//*[text()='Most Downloaded']")); 
 			Thread.sleep(3000);
