@@ -2,6 +2,7 @@ package SetupClass.StepDefinition;
 
 import java.util.concurrent.TimeUnit;
 import java.io.IOException;
+import java.lang.String;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -176,7 +177,7 @@ public class sli_search extends Set{
 	                 Category.click();
 			Thread.sleep(3000);
 		
-		WebElement Product_per_Page = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sli_content_wrapper > div:nth-child(3) > div > div > div.toolbar-amount.sli_num_results > span.toolbar-number.sli_current_page_value"))).getText();
+		String str = driver.findElement(By.cssSelector("#sli_content_wrapper > div:nth-child(3) > div > div > div.toolbar-amount.sli_num_results > span.toolbar-number.sli_current_page_value"))).getText();
 		
 		}
 		}
