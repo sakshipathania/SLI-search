@@ -144,7 +144,7 @@ public class sli_search extends Set{
 		Thread.sleep(3000);
 		Sort.click();
 			
-		WebElement Newest = wait.until(ExpectedConditions.elementToBeClickable(By.className("dk-option  sli_unselected dk-option-highlight"))); 
+		WebElement Newest = wait.until(ExpectedConditions.elementToBeClickable(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report&isort=newest"))); 
 			Thread.sleep(3000);
 	         Newest.click();
 			
@@ -155,12 +155,12 @@ public class sli_search extends Set{
 		Sort1.click();
 		Thread.sleep(3000);
 			
-		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.className("dk-option  sli_selected dk-option-selected "))); 
+		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report"))); 
 			Thread.sleep(3000);
 	         Popularity.click();
 			Thread.sleep(3000);	
 		
-		WebElement Most_downloaded = wait.until(ExpectedConditions.elementToBeClickable(By.className("dk-option  sli_unselected"))); 
+		WebElement Most_downloaded = wait.until(ExpectedConditions.elementToBeClickable(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report&isort=downloaded"))); 
 			Thread.sleep(3000);
 	         Most_downloaded.click();
 			Thread.sleep(3000);	
