@@ -143,7 +143,7 @@ public class sli_search extends Set{
 		Thread.sleep(3000);
 		Sort.click();
 			
-		WebElement Newest = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https/:////www/.slideteam/.net//search//go/?lbc/=slideteam/&method/=and/&p/=Q/&ts/=custom/&uid/=516718103/&w/=hr/%20annual/%20report/&isort/=newest"))); 
+		WebElement Newest = wait.until(ExpectedConditions.elementToBeClickable(By.className("dk-option  sli_unselected dk-option-highlight"))); 
 			Thread.sleep(3000);
 	         Newest.click();
 			
@@ -154,12 +154,30 @@ public class sli_search extends Set{
 		Sort1.click();
 		Thread.sleep(3000);
 			
-		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#dk0-https/:////www/.slideteam/.net//search//go/?lbc/=slideteam/&method/=and/&p/=Q/&ts/=custom/&uid/=516718103/&w/=hr/%20annual/%20report"))); 
+		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.className("dk-option  sli_selected dk-option-selected "))); 
 			Thread.sleep(3000);
 	         Popularity.click();
-			
-		Thread.sleep(3000);	
-			
+			Thread.sleep(3000);	
+		
+		WebElement Most_downloaded = wait.until(ExpectedConditions.elementToBeClickable(By.className("dk-option  sli_unselected"))); 
+			Thread.sleep(3000);
+	         Most_downloaded.click();
+			Thread.sleep(3000);	
+		
+		WebElement Stage = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-stages > li:nth-child(2) > input[type=checkbox]")));
+		
+			Thread.sleep(3000);
+	                 Stage.click();
+			Thread.sleep(3000);
+		
+		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("sli_unselected")));
+		
+			Thread.sleep(3000);
+	                 Category.click();
+			Thread.sleep(3000);
+		
+		WebElement Product_per_Page = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sli_content_wrapper > div:nth-child(3) > div > div > div.toolbar-amount.sli_num_results > span.toolbar-number.sli_current_page_value"))).getText();
+		
 		}
 		}
 		
