@@ -180,7 +180,7 @@ public class sli_search extends Set{
 	                 Stage.click();
 			Thread.sleep(3000);
 		
-		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("sli_unselected")));
+		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-cat1 > li:nth-child(2) > a")));
 		
 			Thread.sleep(3000);
 	                 Category.click();
