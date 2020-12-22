@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.UI;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -142,46 +142,33 @@ public class sli_search extends Set{
 			
 			Thread.sleep(3000);
 		
-		Select Sort =  new Select(driver.findElement(By.cssSelector("#dk0-combobox")));
-					  
-		Thread.sleep(3000);
-		//WebElement Sort= driver.findElement(By.cssSelector("#dk0-combobox"));
-		//Thread.sleep(3000);
-		//Sort.click();
-		Sort.selectByVisibleText("Newest");
 		
-		//Select Newest = new Select(driver.findElement(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report&isort=newest"))); 
-			//Thread.sleep(3000);
-	         //Newest.click();
-			
+		
+		WebElement Sort= driver.findElement(By.cssSelector("#dk0-combobox"));
 		Thread.sleep(3000);
+		Sort.click();
+		
+		WebElement Newest = driver.findElement(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report")); 
+			Thread.sleep(3000);
+	         Newest.click();
+			Thread.sleep(3000);	
+					
 					  
-		Select Sort1 =  new Select(driver.findElement(By.cssSelector("#dk0-combobox")));
-					  
-		Thread.sleep(3000);
-		Sort1.selectByVisibleText("Popularity");
-			
-		Thread.sleep(3000);
-					  
-		Select Sort2 =  new Select(driver.findElement(By.cssSelector("#dk0-combobox")));
-					  
-		Thread.sleep(3000);
-		Sort2.selectByVisibleText("Most Popular");
-					   Thread.sleep(3000);
-			/*WebElement Sort1 = driver.findElement(By.cssSelector("#dk0-combobox"));
+	
+	      WebElement Sort1 = driver.findElement(By.cssSelector("#dk0-combobox"));
 		Thread.sleep(3000);
 		Sort1.click();
 		Thread.sleep(3000);
 			
-		WebElement Popularity = wait.until(ExpectedConditions.elementToBeClickable(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report"))); 
+		WebElement Popularity =  driver.findElement(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report")); 
 			Thread.sleep(3000);
 	         Popularity.click();
 			Thread.sleep(3000);	
 		
-		WebElement Most_downloaded = wait.until(ExpectedConditions.elementToBeClickable(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report&isort=downloaded"))); 
+		WebElement Most_downloaded = driver.findElement(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report&isort=downloaded")); 
 			Thread.sleep(3000);
 	         Most_downloaded.click();
-			Thread.sleep(3000);*/	
+			Thread.sleep(3000);
 		
 		WebElement Stage = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-stages > li:nth-child(2) > input[type=checkbox]")));
 		
