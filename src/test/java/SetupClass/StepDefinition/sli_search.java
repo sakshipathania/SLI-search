@@ -189,8 +189,7 @@ public class sli_search extends Set{
 		String str = driver.findElement(By.cssSelector("#sli_content_wrapper > div:nth-child(3) > div > div > div.toolbar-amount.sli_num_results > span.toolbar-number.sli_current_page_value")).getText();
 		 System.out.println("Total Number of Products ----"+str);
 		Thread.sleep(3000);
-		js.executeScript("alert('Products ----"+str');");
-					driver.navigate().refresh(); Thread.sleep(3800);
+				driver.navigate().refresh(); Thread.sleep(3800);
 		}
 		}
 		
