@@ -48,7 +48,7 @@ public class sli_search extends Set{
 		 WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
 	    old_paid_login_btn.click();
 
-	}
+	
 
 	/*@Then("^enter a keyword to search//.$")
 	public void enter_a_keyword_to_search() throws Throwable {
@@ -103,8 +103,6 @@ public class sli_search extends Set{
 	                }
 	}*/
 		
-		@Then("^Click on Sort//.$")
-	        public void Click_on_Sort() throws Throwable {
 			Thread.sleep(4000);
 		 WebElement search_btnn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
 		  Thread.sleep(2000);
