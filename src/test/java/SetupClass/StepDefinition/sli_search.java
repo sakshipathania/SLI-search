@@ -142,7 +142,7 @@ public class sli_search extends Set{
 			
 			Thread.sleep(3000);
 		
-		Select Sort =  new Select(driver.findElement(By..cssSelector("#dk0-combobox")));
+		Select Sort =  new Select(driver.findElement(By.cssSelector("#dk0-combobox")));
 					  
 		Thread.sleep(3000);
 		//WebElement Sort= driver.findElement(By.cssSelector("#dk0-combobox"));
@@ -156,14 +156,14 @@ public class sli_search extends Set{
 			
 		Thread.sleep(3000);
 					  
-		Select Sort1 =  new Select(driver.findElement(By..cssSelector("#dk0-combobox")));
+		Select Sort1 =  new Select(driver.findElement(By.cssSelector("#dk0-combobox")));
 					  
 		Thread.sleep(3000);
 		Sort1.selectByVisibleText("Popularity");
 			
 		Thread.sleep(3000);
 					  
-		Select Sort2 =  new Select(driver.findElement(By..cssSelector("#dk0-combobox")));
+		Select Sort2 =  new Select(driver.findElement(By.cssSelector("#dk0-combobox")));
 					  
 		Thread.sleep(3000);
 		Sort2.selectByVisibleText("Most Popular");
