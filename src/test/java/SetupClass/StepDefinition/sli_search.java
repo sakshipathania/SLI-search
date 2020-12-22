@@ -148,7 +148,7 @@ public class sli_search extends Set{
 		Thread.sleep(3000);
 		Sort.click();
 		
-		WebElement Newest = driver.findElement(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report")); 
+		WebElement Newest =  driver.findElement(By.xpath("//*[text()='Newest']"));
 			Thread.sleep(3000);
 	         Newest.click();
 			Thread.sleep(3000);	
@@ -160,12 +160,12 @@ public class sli_search extends Set{
 		Sort1.click();
 		Thread.sleep(3000);
 			
-		WebElement Popularity =  driver.findElement(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report")); 
+		WebElement Popularity = driver.findElement(By.xpath("//*[text()='Popularity']")); 
 			Thread.sleep(3000);
 	         Popularity.click();
 			Thread.sleep(3000);	
 		
-		WebElement Most_downloaded = driver.findElement(By.id("dk0-https://www.slideteam.net/search/go?lbc=slideteam&method=and&p=Q&ts=custom&uid=516718103&w=hr%20annual%20report&isort=downloaded")); 
+		WebElement Most_downloaded = driver.findElement(By.xpath("//*[text()='Most Downloaded']")); 
 			Thread.sleep(3000);
 	         Most_downloaded.click();
 			Thread.sleep(3000);
