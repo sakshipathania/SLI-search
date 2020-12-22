@@ -1,10 +1,7 @@
 package SetupClass.StepDefinition;
 
-
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
-import org.junit.Assert;
+import java.io.IOException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,14 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.interactions.Actions;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class sli_search extends Set {
+public class sli_search extends Set{
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -44,9 +39,18 @@ public class sli_search extends Set {
 	} 
 	catch (NoSuchElementException popup) {
 	}
+			WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
+    old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
+    
+    WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[3]/div/input")));
+    old_paid_pass.sendKeys("Qwerty@1");
+		
+		 WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
+	    old_paid_login_btn.click();
+
 	}
 
-	@Then("^enter a keyword to search//.$")
+	/*@Then("^enter a keyword to search//.$")
 	public void enter_a_keyword_to_search() throws Throwable {
 		
 		 for(int i=0; i<=4; i++) {
@@ -97,7 +101,7 @@ public class sli_search extends Set {
 		driver.navigate().refresh(); Thread.sleep(3800);
 
 	                }
-	}
+	}*/
 		
 		@Then("^Click on Sort//.$")
 	        public void Click_on_Sort() throws Throwable {
