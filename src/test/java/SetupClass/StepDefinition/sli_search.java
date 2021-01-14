@@ -121,7 +121,7 @@ public class sli_search extends Set{
 	                 Category.click();
 			Thread.sleep(3000);
 		
-		WebElement Stage = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-stages > li:nth-child(3)")));
+		WebElement Stage = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-stages > li:nth-child(3) > input[type=checkbox]")));
 		js.executeScript("arguments[0].scrollIntoView();",Stage);
 			Thread.sleep(3000);
 	                 Stage.click();
