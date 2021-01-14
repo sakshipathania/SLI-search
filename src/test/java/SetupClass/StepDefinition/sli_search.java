@@ -115,7 +115,7 @@ public class sli_search extends Set{
 	         Most_downloaded.click();
 			Thread.sleep(3000);
 		
-		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/section[2]/div[2]/span/div[1]/ul/li[1]/a)));
+		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/section[2]/div[2]/span/div[1]/ul/li[1]/a")));
 		
 			Thread.sleep(3000);
 	                 Category.click();
