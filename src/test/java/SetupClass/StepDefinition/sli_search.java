@@ -115,7 +115,7 @@ public class sli_search extends Set{
 	         Most_downloaded.click();
 			Thread.sleep(3000);
 		
-		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-cat1 > li:nth-child(2)")));
+		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-cat1 > li.sli_selected > a")));
 		
 			Thread.sleep(3000);
 	                 Category.click();
