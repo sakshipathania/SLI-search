@@ -28,10 +28,10 @@ public class sli_search extends Set{
 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 	log.info("It's opening the website URL");
 	Thread.sleep(1000);
-	driver.get("https://www.slideteam.net");
-	Thread.sleep(2000);
-	driver.get("https://www.slideteam.net");
-	Thread.sleep(2000);
+	//driver.get("https://www.slideteam.net");
+	//Thread.sleep(2000);
+	//driver.get("https://www.slideteam.net");
+	//Thread.sleep(2000);
     driver.manage().deleteAllCookies();
     Thread.sleep(2000);
 	try {
@@ -41,79 +41,17 @@ public class sli_search extends Set{
 	} 
 	catch (NoSuchElementException popup) {
 	}
-			WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[2]/div/input")));
-    old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
-    
-    WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/main/div[2]/div/div[2]/div[2]/div[2]/form/fieldset/div[3]/div/input")));
-    old_paid_pass.sendKeys("Qwerty@1");
-		
-		 WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.login > span:nth-child(1)")));
-	    old_paid_login_btn.click();
-
 	
-
-	/*@Then("^enter a keyword to search//.$")
-	public void enter_a_keyword_to_search() throws Throwable {
-		
-		 for(int i=0; i<=4; i++) {
-	
-		  WebElement search_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
-		  Thread.sleep(2000);
-		  search_btn.sendKeys("Org Chart"); 
-		  Thread.sleep(4000);
-		  
-		  WebElement search_1 =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_ac_section_products"))); 
-		  Thread.sleep(2000); 
-		  String text1=search_1.getText(); 
-		  System.out.println(text1); 
-		  Thread.sleep(3000);
-		  
-		  String actual_text1="Product Suggestions for Hr Interview ";
-		  
-		  if(text1.equalsIgnoreCase(actual_text1)) {
-		  log.info("product suggestion tab header is displayed correctly "); }
-		  
-		  WebElement prod_sugg =wait.until(ExpectedConditions.elementToBeClickable(By.id("sli_raclist_products"))); 
-		  Thread.sleep(2000); 
-		  String pro_sugg_loc=prod_sugg.getText();
-		  System.out.println("product suggestion list name is ----"+pro_sugg_loc);
-		  
-		  WebElement parent_product =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
-		  Thread.sleep(2000);
-		  System.out.println("classname  of parent is ----------------------->"+parent_product);
-		
-		  Thread.sleep(4000);
-	
-		  WebElement search_btn1 = driver.findElement(By.cssSelector("#search"));
-		  Thread.sleep(2000);
-		  search_btn1.sendKeys(Keys.CONTROL + "a");
-                  search_btn1.sendKeys(Keys.DELETE);
-		  Thread.sleep(8000);
-		
-		
-		if(driver.findElement(By.id("sli_raclist_products")).isDisplayed()){
-			
-                    System.out.println("Element is Visible");
-			throw new IOException ("Element Should not be visible");
-			
-                        }  else {
-                            System.out.println("Element is Not Visible");
-			js.executeScript("alert('Product Suggestion Box did not appeared after Keyword Removal');");
-                             }
-		driver.navigate().refresh(); Thread.sleep(3800);
-
-	                }
-	}*/
 		
 			Thread.sleep(4000);
-		 WebElement search_btnn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#search")));
+		 WebElement search_btnn = wait.until(ExpectedConditions.elementToBeClickable(By.id("search-input")));
 		  Thread.sleep(2000);
 		  search_btnn.sendKeys("HR"); 
 		  Thread.sleep(4000);
 		  
 		  
 		  
-		  WebElement search_1n =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_section"))); 
+		  WebElement search_1n =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_products"))); 
 		  Thread.sleep(2000); 
 		  String text00=search_1n.getText(); 
 		  System.out.println(text00); 
@@ -125,17 +63,17 @@ public class sli_search extends Set{
 		  log.info("product suggestion tab header is displayed correctly "); 
 		  }
 		  
-		  WebElement prod_suggn =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
+		  WebElement prod_suggn =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_ac_section"))); 
 		  Thread.sleep(2000); 
 		  String pro_sugg_locn=prod_suggn.getText();
 		  System.out.println("product suggestion list name is ----"+pro_sugg_locn);
 		  
-		  WebElement parent_productn =wait.until(ExpectedConditions.elementToBeClickable(By.className("sli_product_list"))); 
+		  WebElement parent_productn =wait.until(ExpectedConditions.elementToBeClickable(By.className("productList"))); 
 		  Thread.sleep(2000);
 		  System.out.println("classname  of parent is ----------------------->"+parent_productn);
 		   
 		Thread.sleep(4000);
-		  WebElement View_More = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sli_autocomplete > div > div.sli_ac_products > div > div.sli_view_more_link_wrapper > a"))); 
+		  WebElement View_More = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#sli_autocomplete > div > div.sli_ac_products > div > div.view-more-link > a"))); 
 			Thread.sleep(3000);
 			View_More.click();
 			Thread.sleep(5000);
@@ -144,7 +82,8 @@ public class sli_search extends Set{
 		
 		
 		
-		WebElement Sort= driver.findElement(By.cssSelector("#dk0-combobox"));
+		WebElement Sort= driver.findElement(By.cssSelector("#sli_content_wrapper > section.product-list-wrapper.sli_generic_container > div.container.sli_generic_container > div > div.right-col.sli_generic_container > div > div.form-group.sort-selection.sli_sorts > form > span > span.selection > span > span.select2-selection__arrow > b"));
+		js.executeScript("arguments[0].scrollIntoView();",Sort);
 		Thread.sleep(3000);
 		Sort.click();
 		
@@ -155,7 +94,8 @@ public class sli_search extends Set{
 					
 					  
 	
-	      WebElement Sort1 = driver.findElement(By.cssSelector("#dk0-combobox"));
+	      WebElement Sort1 = driver.findElement(By.cssSelector("#sli_content_wrapper > section.product-list-wrapper.sli_generic_container > div.container.sli_generic_container > div > div.right-col.sli_generic_container > div > div.form-group.sort-selection.sli_sorts > form > span > span.selection > span > span.select2-selection__arrow > b"));
+		js.executeScript("arguments[0].scrollIntoView();",Sort1);
 		Thread.sleep(3000);
 		Sort1.click();
 		
@@ -165,7 +105,8 @@ public class sli_search extends Set{
 	         Popularity.click();
 			Thread.sleep(3000);	
 		
-		 WebElement Sort2 = driver.findElement(By.cssSelector("#dk0-combobox"));
+		 WebElement Sort2 = driver.findElement(By.cssSelector("#sli_content_wrapper > section.product-list-wrapper.sli_generic_container > div.container.sli_generic_container > div > div.right-col.sli_generic_container > div > div.form-group.sort-selection.sli_sorts > form > span > span.selection > span > span.select2-selection__arrow > b"));
+		js.executeScript("arguments[0].scrollIntoView();",Sort2);
 		Thread.sleep(3000);
 		Sort2.click();
 		
@@ -174,19 +115,19 @@ public class sli_search extends Set{
 	         Most_downloaded.click();
 			Thread.sleep(3000);
 		
-		WebElement Stage = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-stages > li:nth-child(2) > input[type=checkbox]")));
-		
-			Thread.sleep(3000);
-	                 Stage.click();
-			Thread.sleep(3000);
-		
-		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-cat1 > li:nth-child(2) > a")));
+		WebElement Category = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-cat1 > li:nth-child(2)")));
 		
 			Thread.sleep(3000);
 	                 Category.click();
 			Thread.sleep(3000);
 		
-		String str = driver.findElement(By.cssSelector("#sli_content_wrapper > div:nth-child(3) > div > div > div.toolbar-amount.sli_num_results > span.toolbar-number.sli_current_page_value")).getText();
+		WebElement Stage = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facet-stages > li:nth-child(3) > input[type=checkbox]")));
+		js.executeScript("arguments[0].scrollIntoView();",Stage);
+			Thread.sleep(3000);
+	                 Stage.click();
+			Thread.sleep(3000);
+		
+		String str = driver.findElement(By.cssSelector("#sli_content_wrapper > section.product-list-wrapper.sli_generic_container > div.container.sli_generic_container > div > div.left-col.sli_generic_container > div > div > span.sli_result_set_after_prefix")).getText();
 		 System.out.println("Total Number of Products ----"+str);
 		Thread.sleep(3000);
 				driver.navigate().refresh(); Thread.sleep(3800);
